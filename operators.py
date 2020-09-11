@@ -104,7 +104,15 @@ def sequence(find, numbers):
     else:
         return("Nothing")
 
-
+def exponet(num1, num2):
+    """"This function exponentiates 2 numbers
+    
+        >>> exponet(2, 2)
+        4
+        >>> exponet(2, -2)
+        0.25
+    """
+    return(num1**num2)
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -137,6 +145,9 @@ if __name__ == '__main__':
 
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
+
+    exponentiated = exponet(2, 2)
+    print(f'2**2 = {exponentiated}')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
